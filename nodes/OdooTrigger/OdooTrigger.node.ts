@@ -24,6 +24,8 @@ import {
   odooJSONRPCRequest,
 } from "./GenericFunctionsTrigger";
 
+import { version } from "../version";
+
 export class OdooTrigger implements INodeType {
   description: INodeTypeDescription = {
     displayName: "Odoo Trigger",
@@ -31,7 +33,7 @@ export class OdooTrigger implements INodeType {
     icon: "file:odoo.svg",
     group: ["trigger"],
     version: 1,
-    description: "Handle Odoo events via webhooks",
+    description: `Handle Odoo events via webhooks (v.${version})`,
     defaults: {
       name: "Odoo-Trigger",
     },

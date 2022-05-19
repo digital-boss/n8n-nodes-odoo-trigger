@@ -24,11 +24,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run watch",
-    "build": "tsc && gulp",
+    "build": "genversion -s -e nodes/version.ts && git add . && tsc && gulp",
     "tslint": "tslint -p tsconfig.json -c tslint.json",
     "watch": "tsc --watch",
     "test": "jest",
-    "release": "npm run build && npm publish --access public"
+    "release": "npm run build && npm publish --access=public",
+    "version": "npm run build",
+    "postversion": "git push"
   },
   "files": [
     "dist"
@@ -47,6 +49,7 @@
     "@types/node": "^16.9.1",
     "@types/request": "^2.48.3",
     "@types/request-promise-native": "^1.0.17",
+    "genversion": "^3.1.1",
     "gulp": "^4.0.0",
     "jest": "^27.1.1",
     "n8n-workflow": "^0.91.0",
