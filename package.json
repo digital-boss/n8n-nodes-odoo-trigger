@@ -2,7 +2,7 @@
   "name": "@digital-boss/n8n-nodes-odoo-trigger",
   "version": "1.0.4",
   "author": "Iñaki Breinbauer",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "description": "Odoo-trigger support for n8n",
   "keywords": [
     "n8n",

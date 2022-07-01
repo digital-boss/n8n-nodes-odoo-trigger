@@ -57,3 +57,8 @@ node /var/www/vhosts/n8n/bin/n8n
 [comment]: <> (Nodes by [digital-north-consulting.com]&#40;https://digital-north-consulting.com&#41;. For productive use and consulting on this, [contact us please]&#40;mailto:info@digital-north-consulting.com&#41;.)
 
 [comment]: <> (This node was updated with ❤️ by Valentina Lilova [valentina98]&#40;https://github.com/valentina98&#41;)
+
+
+# License
+
+[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
