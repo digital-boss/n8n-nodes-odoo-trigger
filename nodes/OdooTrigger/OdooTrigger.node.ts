@@ -125,7 +125,7 @@ export class OdooTrigger implements INodeType {
         const options = response.result.map((model) => {
           return {
             name: model.name,
-            value: model.id,
+            value: model.model,
             description: `model: ${model.model}<br> modules: ${model.modules}`,
           };
         });
