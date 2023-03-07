@@ -1,26 +1,26 @@
-import { ICredentialType, NodePropertyTypes } from 'n8n-workflow';
+import { ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class OdooApi implements ICredentialType {
 	name = 'odooApi';
 	displayName = 'Odoo API';
-	documentationUrl = 'odoo';
-	properties = [
+	// documentationUrl = 'odoo';
+	properties: INodeProperties[] = [
 		{
 			displayName: 'Site url',
 			name: 'url',
-			type: 'string' as NodePropertyTypes,
+			type: 'string',
 			default: '',
 		},
 		{
 			displayName: 'Username',
 			name: 'username',
-			type: 'string' as NodePropertyTypes,
+			type: 'string',
 			default: '',
 		},
 		{
 			displayName: 'Password Or API Key',
 			name: 'password',
-			type: 'string' as NodePropertyTypes,
+			type: 'string',
 			default: '',
 			typeOptions: {
 				password: true,
@@ -29,7 +29,7 @@ export class OdooApi implements ICredentialType {
 		{
 			displayName: 'Database name',
 			name: 'db',
-			type: 'string' as NodePropertyTypes,
+			type: 'string',
 			default: '',
 		},
 	];

@@ -1,7 +1,9 @@
 {
 	"name": "@digital-boss/n8n-nodes-odoo-trigger",
 	"version": "1.1.0",
-	"author": "Iñaki Breinbauer",
+	"author": {
+		"name": "Iñaki Breinbauer"
+	},
 	"license": "MIT",
 	"description": "Odoo-trigger support for n8n",
 	"keywords": [
@@ -15,7 +17,8 @@
 		"nodes",
 		"custom",
 		"odoo-trigger",
-		"workflow"
+		"workflow",
+		"n8n-community-node-package"
 	],
 	"repository": {
 		"type": "git",
@@ -28,6 +31,7 @@
 		"format": "prettier nodes credentials --write",
 		"lint": "eslint nodes credentials package.json",
 		"lintfix": "eslint nodes credentials package.json --fix",
+		"nodelinter": "nodelinter --target=./nodes",
 		"watch": "tsc --watch",
 		"release": "npm run build && npm publish --access=public",
 		"version": "npm run build",
@@ -38,6 +42,7 @@
 		"dist"
 	],
 	"n8n": {
+		"n8nNodesApiVersion": 1,
 		"credentials": [
 			"dist/credentials/OdooApi.credentials.js"
 		],
