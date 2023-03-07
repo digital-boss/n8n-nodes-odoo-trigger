@@ -22,7 +22,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/digital-boss/n8n-nodes-odoo-triggerv.git"
+		"url": "git+https://github.com/digital-boss/n8n-nodes-odoo-trigger.git"
 	},
 	"main": "index.js",
 	"scripts": {
