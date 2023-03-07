@@ -56,7 +56,7 @@ export class OdooTrigger implements INodeType {
 		properties: [
 			{
 				displayName: 'Resource Name or ID',
-				name: 'resource',
+				name: 'odooResource', // 'resource' causes loadOptions problem
 				type: 'options',
 				description:
 					'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>',
@@ -115,7 +115,7 @@ export class OdooTrigger implements INodeType {
 					(model: { name: string; model: string; modules: string; id: number }) => {
 						return {
 							name: model.name,
-							value: model.model,
+							value: model.id,
 							description: `model: ${model.model}<br> modules: ${model.modules}`,
 						};
 					},
@@ -226,7 +226,7 @@ export class OdooTrigger implements INodeType {
 					);
 				}
 
-				const resource = this.getNodeParameter('resource') as string;
+				const resource = this.getNodeParameter('odooResource') as string;
 				const trigger = this.getNodeParameter('trigger') as string;
 
 				const credentials = await this.getCredentials('odooApi');
