@@ -43,6 +43,7 @@ export class OdooTrigger implements INodeType {
 			{
 				name: 'odooApi',
 				required: true,
+				testedBy: 'odooApiTest',
 			},
 		],
 		webhooks: [
