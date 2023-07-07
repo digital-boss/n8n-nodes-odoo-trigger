@@ -41,6 +41,7 @@ export class OdooTrigger implements INodeType {
 		outputs: ['main'],
 		credentials: [
 			{
+				// n8n nodes-base credentials
 				name: 'odooApi',
 				required: true,
 				testedBy: 'odooApiTest',
@@ -160,11 +161,6 @@ export class OdooTrigger implements INodeType {
 					};
 					const result = await this.helpers.request!(options);
 					if (result.error || !result.result) {
-						return {
-							status: 'Error',
-							message: `Credentials are not valid`,
-						};
-					} else if (result.error) {
 						return {
 							status: 'Error',
 							message: `Credentials are not valid: ${result.error.data.message}`,
